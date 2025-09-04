@@ -1,0 +1,10 @@
+{
+    "name": "fraud-case",
+    "script": "server.js",
+    "instances": 1,
+    "env": {
+      "PORT": 8080
+    }
+  }
+  
+  

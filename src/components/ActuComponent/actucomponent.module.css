@@ -1,0 +1,138 @@
+.actuSection {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+    grid-column: 1 / -1; /* Prend toute la largeur sur desktop */
+  width: 100vw;        /* occupe toute la largeur de la fenêtre */
+  margin-left: calc(-50vw + 50%); /* enlève la contrainte du parent container */
+  box-sizing: border-box;
+}
+
+.sectionHeader {
+  margin-bottom: 25px;
+}
+
+.sectionHeader h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #a50034;
+  margin: 0 0 10px 0;
+}
+
+.headerLine {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #a50034 0%, #004d98 100%);
+  border-radius: 2px;
+}
+
+.actuGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.actuCard {
+  display: flex;
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.actuCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(165, 0, 52, 0.15);
+}
+
+.actuImage {
+  flex-shrink: 0;
+  width: 120px;
+  height: 100px;
+}
+
+.actuImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.actuContent {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.actuDate {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 5px;
+}
+
+.actuContent h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1f1f1f;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.actuContent p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.readMore {
+  background: #a50034;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-self: flex-start;
+}
+
+.readMore:hover {
+  background: #8b0028;
+}
+
+@media (max-width: 768px) {
+  .actuSection {
+    padding: 20px;
+  }
+
+  .actuCard {
+    flex-direction: column;
+  }
+
+  .actuImage {
+    width: 100%;
+    height: 150px;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .actuSection {
+    padding: 15px;
+  }
+
+  .actuContent {
+    padding: 12px;
+  }
+}

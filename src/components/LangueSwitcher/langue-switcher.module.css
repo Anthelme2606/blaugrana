@@ -1,0 +1,40 @@
+/* components/LanguageSwitcher.module.css */
+
+.langSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--card); /* Couleur de fond douce */
+  border: 1px solid var(--accent); /* Bordure subtile */
+  border-radius: var(--radius); /* Coins arrondis */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary); /* Couleur principale */
+  text-transform: uppercase; /* Texte en majuscule */
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1); /* Ombre légère pour le bouton */
+  max-width: 100px;
+}
+
+.langSwitcher:hover {
+  background-color: var(--accent); /* Fond sur hover */
+  color: white; /* Texte blanc sur hover */
+  transform: translateY(-2px); /* Légère élévation sur hover */
+}
+
+/* .langSwitcher:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent); 
+} */
+
+.icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  stroke: currentColor; /* Utilisation de la couleur actuelle du texte */
+}
+
+.label {
+  font-size: 1rem;
+}

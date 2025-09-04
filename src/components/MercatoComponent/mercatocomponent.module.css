@@ -1,0 +1,163 @@
+.mercatoSection {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  grid-column: 1 / -1; /* Prend toute la largeur sur desktop */
+  width: 100vw;        /* occupe toute la largeur de la fenêtre */
+  margin-left: calc(-50vw + 50%); /* enlève la contrainte du parent container */
+  box-sizing: border-box;
+}
+
+.sectionHeader {
+  margin-bottom: 25px;
+}
+
+.sectionHeader h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #a50034;
+  margin: 0 0 10px 0;
+}
+
+.headerLine {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #a50034 0%, #004d98 100%);
+  border-radius: 2px;
+}
+
+.mercatoList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.mercatoCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mercatoCard:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(165, 0, 52, 0.1);
+}
+
+.playerInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.playerImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+}
+
+.playerDetails h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1f1f1f;
+  margin: 0 0 4px 0;
+}
+
+.clubName {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.transferInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.transferType {
+  background: #a50034;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.montant {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1f1f1f;
+}
+
+.statut {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.voirPlus {
+  width: 100%;
+  background: linear-gradient(135deg, #a50034 0%, #004d98 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.voirPlus:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(165, 0, 52, 0.3);
+}
+
+@media (max-width: 768px) {
+  .mercatoSection {
+    padding: 20px;
+  }
+
+  .mercatoCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .transferInfo {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .sectionHeader h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mercatoSection {
+    padding: 15px;
+  }
+
+  .playerImage {
+    width: 40px;
+    height: 40px;
+  }
+
+  .playerDetails h4 {
+    font-size: 0.9rem;
+  }
+}

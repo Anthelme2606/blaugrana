@@ -1,0 +1,227 @@
+.matchSection {
+  background: #ffffff;
+ 
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  grid-column: 1 / -1; /* Prend toute la largeur sur desktop */
+  width: 100vw;        /* occupe toute la largeur de la fenêtre */
+  margin-left: calc(-50vw + 50%); /* enlève la contrainte du parent container */
+  box-sizing: border-box;
+}
+
+.sectionHeader {
+  margin-bottom: 25px;
+}
+
+.sectionHeader h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #a50034;
+  margin: 0 0 10px 0;
+}
+
+.headerLine {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #a50034 0%, #004d98 100%);
+  border-radius: 2px;
+}
+
+.tabContainer {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab {
+  background: none;
+  border: none;
+  padding: 12px 20px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  color: #a50034;
+  border-bottom-color: #a50034;
+}
+
+.tab:hover {
+  color: #a50034;
+}
+.matchList {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+  box-sizing: border-box;
+}
+
+.matchCard {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.matchCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(165, 0, 52, 0.15);
+}
+
+.competitionBadge {
+  background: #004d98;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.matchInfo {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* team | score/versus | team */
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  min-width: 0; /* important pour text-overflow */
+}
+
+.team img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.team span {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #1f1f1f;
+  max-width: 120px;       /* limite la largeur */
+  white-space: nowrap;    /* ne passe pas à la ligne */
+  overflow: hidden;       /* cache le surplus */
+  text-overflow: ellipsis; /* ajoute "…" si trop long */
+}
+
+.versus {
+  font-weight: 700;
+  color: #6b7280;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.score {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #a50034;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.matchDetails {
+  text-align: center;
+}
+
+.date {
+  font-weight: 500;
+  color: #1f1f1f;
+  margin-bottom: 5px;
+}
+
+.venue {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.forme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.formeIndicators {
+  display: flex;
+  gap: 4px;
+}
+
+.formePoint {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.formePoint.win {
+  background: #10b981;
+}
+
+.formePoint.loss {
+  background: #ef4444;
+}
+
+/* 📱 TABLETTE */
+@media (max-width: 768px) {
+  .matchCard {
+    padding: 20px;
+  }
+
+  .team img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .team span {
+    font-size: 0.8rem;
+    max-width: 90px;
+  }
+
+  .score {
+    font-size: 1.2rem;
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 480px) {
+  .matchCard {
+    padding: 15px;
+  }
+
+  .team img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .team span {
+    font-size: 0.75rem;
+    max-width: 70px;
+  }
+
+  .score {
+    font-size: 1rem;
+  }
+}
