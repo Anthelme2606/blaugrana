@@ -4,27 +4,44 @@ import MercatoComponent from "@components/MercatoComponent"
 import MatchHistory from "@components/MatchHistory"
 import ClubInfo from "@components/ClubInfo"
 import Footer from "@components/Footer"
-import "./landing-page.css"
+import ClassementComponent from "@components/ClassementComponent";
+import EspaceAdsense from "@components/EspaceAdsense";
+import "./landing-page.css";
 
-function App() {
+function LandingPage() {
   return (
-    <div className="App">
-      <Navbar />
+    <>
+     <Navbar />
+<div className="App">
+     
       <main className="main-content">
-        <div className="hero-section">
-          <h1>FC Barcelona</h1>
-          <p>Més que un club</p>
+        <div className="main-title-section">
+          {/* <h1>FC Barcelona - Més que un club</h1> */}
         </div>
-        <div className="content-grid">
-          <ActuComponent />
-          <MercatoComponent />
-          <MatchHistory />
-          <ClubInfo />
+
+        <div className="three-column-layout">
+         
+          <div className="center-column">
+            <div className="espace-defense">
+             
+              <MatchHistory />
+            </div>
+          </div>
+           <div className="left-column">
+            <ActuComponent />
+          </div>
+          <div className="right-column">
+            <ClubInfo />
+          </div>
         </div>
+
+        <EspaceAdsense />
       </main>
-      <Footer />
+      
     </div>
+    <Footer />
+    </>
   )
 }
 
-export default App
+export default LandingPage

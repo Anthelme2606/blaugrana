@@ -1,216 +1,255 @@
 .clubSection {
   background: #ffffff;
-  
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   border: 1px solid #e5e7eb;
-  grid-column: 1 / -1; /* Prend toute la largeur sur desktop */
-  width: 100vw;        /* occupe toute la largeur de la fenêtre */
-  margin-left: calc(-50vw + 50%); /* enlève la contrainte du parent container */
+  margin: 0; 
+  padding: 0; 
+  overflow-x: hidden;
+  width: calc(100% - 2px); /* prend toute la largeur mais respecte la marge */
+  max-width: 100%;
+  box-sizing: border-box; /* inclut padding et border dans la largeur */
+}
+
+
+.newsSection {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
-.clubContent {
+.newsHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f8f9fa;
+}
+
+.infoIcon {
+  font-size: 16px;
+}
+
+.newsHeader h3 {
+
+  font-weight: 600;
+  font-size: 14px;
+  color: #1f1f1f;
   margin: 0;
-  padding: 0;
+}
+
+.newsList {
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.newsItem {
+  display: flex;
+   gap: 12px;
+  padding: 12px 20px;
+  border-bottom: 1px solid #f1f3f4;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
   width: 100%;
+  max-width: 100%; 
+  box-sizing: border-box;
+
+}
+
+.newsItem:hover {
+  background-color: #f8f9fa;
+}
+
+.newsTime {
+
+   font-weight: 600;
+  font-size: 12px;
+  color: #004d98;
+  min-width: 35px; 
+
+}
+
+.newsTitle {
+
+   font-size: 13px;
+  color: #1f1f1f;
+  line-height: 1.4;
+ /* flex: 1;*/
+ overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+
+}
+
+.importantNews {
+  color: #dc2626 !important;
+}
+
+.newsNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-top: 1px solid #e5e7eb;
+  background: #f8f9fa;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+}
+
+.navButton:hover {
+  color: #004d98;
+}
+
+.allNewsLink {
+
+  font-size: 12px;
+  color: #004d98;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.allNewsLink:hover {
+  text-decoration: underline;
+}
+
+/* Adding classement section styles below news section */
+.classementSection {
+  width: 100%;
+  margin-top: 20px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.classementHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f8f9fa;
+}
+
+.classementIcon {
+  font-size: 16px;
+  color: #1f1f1f;
+}
+
+.classementHeader h3 {
+
+  font-weight: 600;
+  font-size: 14px;
+  color: #1f1f1f;
+  margin: 0;
+}
+
+.classementTable {
+  background: #ffffff;
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
-.sectionHeader {
-  margin-bottom: 25px;
-}
-
-.sectionHeader h2 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: #a50034;
-  margin: 0 0 10px 0;
-}
-
-.headerLine {
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, #a50034 0%, #004d98 100%);
-  border-radius: 2px;
-}
-
-.clubContent {
+.tableHeader {
   display: grid;
-  gap: 30px;
-
-}
-
-.clubDescription h3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: #004d98;
-  margin: 0 0 15px 0;
-}
-
-.clubDescription p {
-
-  
-  line-height: 1.6;
-  color: #4b5563;
-  font-size: 1rem;
- 
-}
-
-.statsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
-}
-
-.statCard {
-  background: linear-gradient(135deg, #a50034 0%, #004d98 100%);
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.statCard:hover {
-  transform: translateY(-3px);
-}
-
-.statValue {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 900;
-  font-size: 2rem;
-  margin-bottom: 5px;
-}
-
-.statLabel {
-  font-size: 0.9rem;
-  opacity: 0.9;
-}
-
-.achievements h4 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 1.2rem;
-  color: #1f1f1f;
-  margin: 0 0 20px 0;
-}
-
-.achievementsList {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.achievementItem {
-  display: flex;
-  gap: 15px;
-  padding: 15px;
+  grid-template-columns: 30px 1fr 40px 30px 40px;
+  gap: 10px;
+  padding: 12px 20px;
   background: #f8f9fa;
-  border-radius: 8px;
-  border-left: 4px solid #a50034;
-}
+  border-bottom: 1px solid #e5e7eb;
 
-.achievementYear {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: #a50034;
-  min-width: 50px;
-}
-
-.achievementContent h5 {
   font-weight: 600;
-  color: #1f1f1f;
-  margin: 0 0 5px 0;
-}
-
-.achievementContent p {
+  font-size: 12px;
   color: #6b7280;
-  margin: 0;
-  font-size: 0.9rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-.stadium h4 {
-  font-family: "Montserrat", sans-serif;
+.tableRow {
+  display: grid;
+  grid-template-columns: 30px 1fr 40px 30px 40px;
+  gap: 10px;
+  padding: 12px 20px;
+  border-bottom: 1px solid #f1f3f4;
+
+  font-size: 13px;
+  color: #1f1f1f;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.tableRow:hover {
+  background-color: #f8f9fa;
+}
+
+.barceloneRow {
+  background-color: #e3f2fd !important;
+  color: #004d98 !important;
   font-weight: 600;
-  font-size: 1.2rem;
-  color: #1f1f1f;
-  margin: 0 0 15px 0;
 }
 
-.stadiumInfo {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
+.barceloneRow:hover {
+  background-color: #e3f2fd !important;
 }
 
-.stadiumImage {
-  width: 200px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
-  flex-shrink: 0;
+.positionCol {
+  text-align: center;
 }
 
-.stadiumDetails {
-  flex: 1;
+.clubCol {
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
 }
 
-.stadiumDetails p {
-  margin: 0 0 8px 0;
-  color: #4b5563;
-}
-
-.stadiumDetails strong {
-  color: #1f1f1f;
+.pointsCol,
+.matchesCol,
+.diffCol {
+  text-align: center;
 }
 
 @media (max-width: 768px) {
-  .clubSection {
-    padding: 20px;
+  .clubSection{
+    margin: 0;
+    padding: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  }
+  .newsHeader {
+    padding: 12px 15px;
   }
 
-  .statsGrid {
-    grid-template-columns: repeat(2, 1fr);
+  .newsItem {
+    padding: 10px 15px;
   }
 
-  .stadiumInfo {
-    flex-direction: column;
+  .newsNavigation {
+    padding: 10px 15px;
   }
 
-  .stadiumImage {
-    width: 100%;
-    height: 150px;
+  .classementHeader {
+    padding: 12px 15px;
   }
 
-  .sectionHeader h2 {
-    font-size: 1.5rem;
-  }
-
-  .statValue {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .clubSection {
-    padding: 15px;
-  }
-
-  .statsGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .achievementItem {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .achievementYear {
-    min-width: auto;
+  .tableHeader,
+  .tableRow {
+    padding: 10px 15px;
+    grid-template-columns: 25px 1fr 35px 25px 35px;
+    gap: 8px;
   }
 }

@@ -1,69 +1,125 @@
+/* ========== APP CONTAINER ========== */
 .App {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-    grid-column: 1 / -1; /* Prend toute la largeur sur desktop */
-  width: 100vw;        /* occupe toute la largeur de la fenêtre */
-  margin-left: calc(-50vw + 50%); /* enlève la contrainte du parent container */
+  grid-column: 1 / -1; 
+  width: 100vw;        
+  margin-left: calc(-50vw + 50%); 
   box-sizing: border-box;
+  overflow-x: hidden;      
+}
+.App {
+  min-height: 100vh; /* au moins la hauteur de la fenêtre */
+  background-image: url('../../../assets/bg.jpg'); /* chemin relatif au CSS */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--color-black);
 }
 
-.main-content {
-  margin: 0;
-  padding: 0;
+/* .App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  overflow-x: hidden;
   box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0 auto;     
+  padding: 0 80px;   
+} */
+
+/* Mobile */
+
+
+/* ========== MAIN CONTENT ========== */
+.main-content {
   flex: 1;
-  padding-top: 80px; 
-  
-  
+  width: 100%;
+  margin: 0;
+  padding: 80px 80px 80px 80px; 
+  box-sizing: border-box;
 }
 
-.hero-section {
-  background: linear-gradient(135deg, #a50034 0%, #004d98 100%);
+/* ========== MAIN TITLE SECTION ========== */
+.main-title-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   color: white;
   text-align: center;
-  padding: 60px 20px;
-  margin-bottom: 40px;
+  padding: 40px 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-section h1 {
+.main-title-section h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
-  font-size: 3.5rem;
-  margin: 0 0 10px 0;
+  font-size: 2.8rem;
+  margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.hero-section p {
-  font-size: 1.2rem;
-  margin: 0;
-  opacity: 0.9;
-}
-
-.content-grid {
-  max-width: 1200px;
+/* ========== THREE-COLUMN LAYOUT ========== */
+.three-column-layout {
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
   margin-bottom: 40px;
   box-sizing: border-box;
 }
 
+.left-column,
+.center-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.espace-defense h2 {
+  color: #004d98;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 3px solid #a50034;
+  padding-bottom: 10px;
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+@media (max-width: 1024px) {
+  .three-column-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .right-column {
+    grid-column: 1 / -1; /* prend toute la largeur */
+  }
+}
+
 @media (max-width: 768px) {
-  .hero-section h1 {
-    font-size: 2.5rem;
+
+  .main-content {
+    padding: 0;       /* pas de marge sur mobile */
   }
 
-  .hero-section {
-    padding: 40px 20px;
+  .main-title-section {
+    padding: 30px 20px;
+    height: auto; /* pour éviter que le texte flotte en hauteur fixe */
   }
 
-  .content-grid {
-  
+  .main-title-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .three-column-layout {
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 0 15px;
@@ -71,11 +127,7 @@
 }
 
 @media (max-width: 480px) {
-  .hero-section h1 {
-    font-size: 2rem;
-  }
-
-  .hero-section p {
-    font-size: 1rem;
+  .main-title-section h1 {
+    font-size: 1.8rem;
   }
 }

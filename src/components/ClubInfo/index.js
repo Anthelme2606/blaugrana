@@ -1,88 +1,83 @@
 import styles from "./clubinfo.module.css"
-import CampNou from "@assets/camp-nou.png"
+
 const ClubInfo = () => {
-  const stats = [
-    { label: "Fondé en", value: "1899" },
-    { label: "Titres Liga", value: "27" },
-    { label: "Champions League", value: "5" },
-    { label: "Coupes du Roi", value: "31" },
+  const newsItems = [
+    { time: "09:00", title: "Balde, incertain pour le début de la ligu...", isImportant: false },
+    { time: "07:54", title: "Accord conclu : le Barça a déjà son nou...", isImportant: false },
+    { time: "03/09", title: "Marc Casadó face à son plus grand test", isImportant: false },
+    { time: "03/09", title: "Coup dur : le Barça annonce la blessur...", isImportant: true },
+    { time: "03/09", title: "Barça : Les quatre recrues inattendues ...", isImportant: false },
+    { time: "03/09", title: "Barça : le bilan d'un mercato animé, ma...", isImportant: false },
+    { time: "02/09", title: "Dernière minute : deux matchs du Barç...", isImportant: false },
+    { time: "02/09", title: "Barça : le mystère du numéro de maillo...", isImportant: false },
+    { time: "02/09", title: "Mercato : un transfert gratuit finalisé d...", isImportant: true },
+    { time: "02/09", title: "Bonne nouvelle : le Barça valide une de...", isImportant: true },
+    { time: "02/09", title: "Mercato : un départ bouclé dans les de...", isImportant: false },
+    { time: "01/09", title: "Inscription de Roony Bardghji : le Barça...", isImportant: false },
+    { time: "01/09", title: "Fin du feuilleton : le verdict tombe pour ...", isImportant: false },
+    { time: "01/09", title: "Rencontre décisive pour un retour tant ...", isImportant: false },
   ]
 
-  const achievements = [
-    {
-      year: "2023",
-      title: "Champion d'Espagne",
-      description: "27ème titre de Liga",
-    },
-    {
-      year: "2021",
-      title: "Coupe du Roi",
-      description: "Victoire contre Athletic Bilbao",
-    },
-    {
-      year: "2015",
-      title: "Triplé historique",
-      description: "Liga, Champions League, Coupe du Roi",
-    },
+  const classementData = [
+    { position: 4, club: "Villarreal CF", points: 7, matches: 3, diff: 7 },
+    { position: 5, club: "Barcelone", points: 7, matches: 3, diff: 4, isBarcelone: true },
+    { position: 6, club: "Espanyol", points: 7, matches: 3, diff: 2 },
+    { position: 7, club: "Getafe", points: 6, matches: 3, diff: 0 },
+    { position: 8, club: "Elche", points: 5, matches: 3, diff: 2 },
   ]
 
   return (
     <section className={styles.clubSection} id="club">
-      <div className={styles.sectionHeader}>
-        <h2>Club Info</h2>
-        <div className={styles.headerLine}></div>
-      </div>
-
-      <div className={styles.clubContent}>
-        <div className={styles.clubDescription}>
-          <h3>Més que un club</h3>
-          <p>
-            Le FC Barcelone est bien plus qu'un club de football. Fondé en 1899, le Barça représente les valeurs
-            catalanes et l'excellence sportive. Avec ses couleurs blaugrana et sa philosophie de jeu unique, le club
-            continue d'inspirer des millions de fans à travers le monde.
-          </p>
+      <div className={styles.newsSection}>
+        <div className={styles.newsHeader}>
+          <span className={styles.infoIcon}>ℹ️</span>
+          <h3>FC Barcelone Infos</h3>
         </div>
 
-        <div className={styles.statsGrid}>
-          {stats.map((stat, index) => (
-            <div key={index} className={styles.statCard}>
-              <div className={styles.statValue}>{stat.value}</div>
-              <div className={styles.statLabel}>{stat.label}</div>
-            </div>
+        <div className={styles.newsList}>
+          {newsItems.map((item, index) => (
+            <a key={index} href="#" className={styles.newsItem}>
+              <span className={styles.newsTime}>{item.time}</span>
+              <span className={`${styles.newsTitle} ${item.isImportant ? styles.importantNews : ""}`}>
+                {item.title}
+              </span>
+            </a>
           ))}
         </div>
 
-        <div className={styles.achievements}>
-          <h4>Derniers succès</h4>
-          <div className={styles.achievementsList}>
-            {achievements.map((achievement, index) => (
-              <div key={index} className={styles.achievementItem}>
-                <div className={styles.achievementYear}>{achievement.year}</div>
-                <div className={styles.achievementContent}>
-                  <h5>{achievement.title}</h5>
-                  <p>{achievement.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className={styles.newsNavigation}>
+          <button className={styles.navButton}>▲</button>
+          <button className={styles.navButton}>▼</button>
+          <a href="#" className={styles.allNewsLink}>
+            • Tout le fil info
+          </a>
+        </div>
+      </div>
+
+      <div className={styles.classementSection}>
+        <div className={styles.classementHeader}>
+          <span className={styles.classementIcon}>☰</span>
+          <h3>Classement</h3>
         </div>
 
-        <div className={styles.stadium}>
-          <h4>Camp Nou</h4>
-          <div className={styles.stadiumInfo}>
-            <img src={CampNou} alt="Camp Nou" className={styles.stadiumImage} />
-            <div className={styles.stadiumDetails}>
-              <p>
-                <strong>Capacité:</strong> 99,354 places
-              </p>
-              <p>
-                <strong>Inauguré:</strong> 24 septembre 1957
-              </p>
-              <p>
-                <strong>Surnom:</strong> "Le temple du football"
-              </p>
-            </div>
+        <div className={styles.classementTable}>
+          <div className={styles.tableHeader}>
+            <span className={styles.positionCol}>#</span>
+            <span className={styles.clubCol}>Club</span>
+            <span className={styles.pointsCol}>Pts</span>
+            <span className={styles.matchesCol}>J</span>
+            <span className={styles.diffCol}>Diff</span>
           </div>
+
+          {classementData.map((team, index) => (
+            <div key={index} className={`${styles.tableRow} ${team.isBarcelone ? styles.barceloneRow : ""}`}>
+              <span className={styles.positionCol}>{team.position}</span>
+              <span className={styles.clubCol}>{team.club}</span>
+              <span className={styles.pointsCol}>{team.points}</span>
+              <span className={styles.matchesCol}>{team.matches}</span>
+              <span className={styles.diffCol}>{team.diff}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

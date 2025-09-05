@@ -3,49 +3,79 @@ import Placehold from "@assets/placeholder.png";
 import Actu1 from "@assets/actu-1.png"
 import Actu2 from "@assets/actu-2.png"
 import Actu3 from "@assets/actu-3.png"
+import Actu4 from "@assets/actu-4.png"
+
 const ActuComponent = () => {
   const actualites = [
     {
       id: 1,
-      titre: "Victoire éclatante contre le Real Madrid",
-      resume: "Le Barça s'impose 3-1 dans le Clasico avec un triplé de Lewandowski",
-      date: "15 Mars 2024",
-      image: Actu1,
+      categorie: "À LA UNE",
+      titre: "ACCORD CONCLU : LE BARÇA A DÉJÀ SON NOUVEAU...",
+      resume:
+        "Le FC Barcelone a reçu un nouveau coup dur à l'approche de la trêve internationale, venant assombrir l'horizon de l'entraîneur allemand. Touché au...",
+      heure: "09:00",
+      image: Actu4,
+      featured: true, // Added featured flag for main article
     },
     {
       id: 2,
-      titre: "Nouveau contrat pour Pedri",
-      resume: "Le milieu de terrain prolonge jusqu'en 2028",
-      date: "12 Mars 2024",
+      categorie: "CLUB",
+      titre: "Balde, incertain pour le début de la ligue des...",
+      resume:
+        "Le FC Barcelone a reçu un nouveau coup dur à l'approche de la trêve internationale, venant assombrir l'horizon de l'entraîneur allemand.Touché au...",
+      heure: "09:00",
       image: Actu2,
     },
     {
       id: 3,
-      titre: "Préparation de la finale de Champions League",
-      resume: "L'équipe s'entraîne intensivement avant la grande finale",
-      date: "10 Mars 2024",
+      categorie: "CLUB",
+      titre: "Marc Casadó face à son plus grand test",
+      resume:
+        "Malgré les doutes et les indiscrétions d'un probable départ qui ont entouré son été, la saison 2025/26 s'annonce comme un tournant majeur pour Marc...",
+      heure: "03/09",
       image: Actu3,
+    },
+    {
+      id: 4,
+      categorie: "CLUB",
+      titre: "Coup dur : le Barça annonce la blessure d'un...",
+      resume:
+        "Alors que nous sommes à la trêve internationale, le FC Barcelone poursuit ses séances d'entraînement avec les joueurs non appelés en...",
+      heure: "03/09",
+      image: Actu1,
     },
   ]
 
-  return (
-    <section className={styles.actuSection} id="actualites">
-      <div className={styles.sectionHeader}>
-        <h2>Actualités</h2>
-        <div className={styles.headerLine}></div>
-      </div>
+  const featuredArticle = actualites.find((actu) => actu.featured)
+  const regularArticles = actualites.filter((actu) => !actu.featured)
 
-      <div className={styles.actuGrid}>
-        {actualites.map((actu) => (
+  return (
+    <section className={styles.actuSection}>
+      {featuredArticle && (
+        <article className={styles.featuredArticle}>
+          <div className={styles.featuredImage}>
+            <img src={featuredArticle.image || "/placeholder.svg"} alt={featuredArticle.titre} />
+            <div className={styles.featuredOverlay}>
+              <span className={styles.featuredCategorie}>{featuredArticle.categorie}</span>
+              <h2 className={styles.featuredTitre}>{featuredArticle.titre}</h2>
+            </div>
+          </div>
+        </article>
+      )}
+
+      <div className={styles.actuList}>
+        {regularArticles.map((actu) => (
           <article key={actu.id} className={styles.actuCard}>
             <div className={styles.actuImage}>
               <img src={actu.image || "/placeholder.svg"} alt={actu.titre} />
+              <span className={styles.categorie}>{actu.categorie}</span>
             </div>
             <div className={styles.actuContent}>
-              <span className={styles.actuDate}>{actu.date}</span>
               <h3>{actu.titre}</h3>
               <p>{actu.resume}</p>
-              <button className={styles.readMore}>Lire la suite</button>
+              <div className={styles.actuMeta}>
+                <span className={styles.actuHeure}>🕐 {actu.heure}</span>
+              </div>
             </div>
           </article>
         ))}
@@ -55,3 +85,4 @@ const ActuComponent = () => {
 }
 
 export default ActuComponent
+

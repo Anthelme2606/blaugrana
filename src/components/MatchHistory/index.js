@@ -7,6 +7,10 @@ import LevanteLogo from "@assets/levante-logo.jpg"
 import ValenciaLogo from "@assets/valencia-cf-logo.jpg"
 import RealLogo from "@assets/real-madrid-crest.png"
 import BayernLogo from "@assets/bayern-munich-logo.png"
+"use client"
+
+
+
 const MatchHistory = () => {
   const [activeTab, setActiveTab] = useState("upcoming")
 
@@ -14,119 +18,116 @@ const MatchHistory = () => {
     {
       id: 1,
       competition: "Liga - Journée 4",
-      homeTeam: "FC Barcelona",
-      awayTeam: "Valencia CF",
+      homeTeam: "BARCELONE",
+      awayTeam: "VALENCE CF",
       homeTeamLogo: BarcaLogo,
       awayTeamLogo: ValenciaLogo,
       date: "Le 14/09/2025 à 21h00",
       venue: "Camp Nou",
-    },
-    {
-      id: 2,
-      competition: "Champions League",
-      homeTeam: "Bayern Munich",
-      awayTeam: "FC Barcelona",
-      homeTeamLogo: BayernLogo,
-      awayTeamLogo: BarcaLogo,
-      date: "Le 18/09/2025 à 20h00",
-      venue: "Allianz Arena",
     },
   ]
 
   const pastMatches = [
     {
       id: 1,
-      competition: "Liga - Journée 2",
-      homeTeam: "Levante",
-      awayTeam: "FC Barcelona",
-      homeTeamLogo: LevanteLogo,
+      competition: "Liga - Journée 3",
+      homeTeam: "R. VALLADOLID",
+      awayTeam: "BARCELONE",
+      homeTeamLogo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-U0cC34nioDqheI9BlpaFxpyPDDM5KE.png",
       awayTeamLogo: BarcaLogo,
-      score: "2-3",
-      forme: [true, true, true, true, false], // true = victoire, false = défaite
+      score: "1-1",
+      forme: [true, true, true, true, false],
     },
     {
       id: 2,
-      competition: "Liga - Journée 1",
-      homeTeam: "FC Barcelona",
-      awayTeam: "Real Madrid",
-      homeTeamLogo: BarcaLogo,
-      awayTeamLogo: RealLogo,
-      score: "3-1",
-      forme: [true, true, false, true, true],
+      competition: "Liga - Journée 2",
+      homeTeam: "LEVANTE",
+      awayTeam: "BARCELONE",
+      homeTeamLogo: LevanteLogo,
+      awayTeamLogo: BarcaLogo,
+      score: "2-3",
+      forme: [true, true, true, true, false],
     },
   ]
 
   return (
     <section className={styles.matchSection} id="matchs">
-      <div className={styles.sectionHeader}>
-        <h2>Matchs</h2>
-        <div className={styles.headerLine}></div>
-      </div>
-
-      <div className={styles.tabContainer}>
-        <button
-          className={`${styles.tab} ${activeTab === "upcoming" ? styles.active : ""}`}
-          onClick={() => setActiveTab("upcoming")}
-        >
-          À venir
-        </button>
-        <button
-          className={`${styles.tab} ${activeTab === "past" ? styles.active : ""}`}
-          onClick={() => setActiveTab("past")}
-        >
-          Passés
-        </button>
-      </div>
-
       <div className={styles.matchList}>
-        {activeTab === "upcoming"
-          ? upcomingMatches.map((match) => (
-              <div key={match.id} className={styles.matchCard}>
-                <div className={styles.competitionBadge}>{match.competition}</div>
-                <div className={styles.matchInfo}>
-                  <div className={styles.team}>
-                    <img src={match.homeTeamLogo || "/placeholder.svg"} alt={match.homeTeam} />
-                    <span>{match.homeTeam}</span>
-                  </div>
-                  <div className={styles.versus}>VS</div>
-                  <div className={styles.team}>
-                    <img src={match.awayTeamLogo || "/placeholder.svg"} alt={match.awayTeam} />
-                    <span>{match.awayTeam}</span>
-                  </div>
-                </div>
-                <div className={styles.matchDetails}>
-                  <div className={styles.date}>{match.date}</div>
-                  <div className={styles.venue}>📍 {match.venue}</div>
+        <div className={styles.adsenseContainer}>
+
+        </div>
+        <div className={styles.sectionTitle}>
+          <span className={styles.sectionIcon}>🏆 À venir : Liga - Journée 4</span>
+        </div>
+
+        {upcomingMatches.map((match) => (
+          <div key={match.id} className={styles.matchCard}>
+            <div className={styles.matchInfo}>
+              <div className={styles.team}>
+                <img src={match.homeTeamLogo || "/placeholder.svg"} alt={match.homeTeam} />
+                <span>{match.homeTeam}</span>
+              </div>
+              <div className={styles.versus}>vs</div>
+              <div className={styles.team}>
+                <img src={match.awayTeamLogo || "/placeholder.svg"} alt={match.awayTeam} />
+                <span>{match.awayTeam}</span>
+              </div>
+            </div>
+            <div className={styles.matchDetails}>
+              <div className={styles.date}>
+                <span className={styles.clockIcon}>🕐{match.date}</span>
+              
+              </div>
+              <div className={styles.locationIcon}>📍</div>
+            </div>
+            <div className={styles.betButton}>
+              <span className={styles.pmuLogo}>PMU</span>
+              Pariez sur le match
+              <span className={styles.pmuLogo}>PMU</span>
+            </div>
+          </div>
+        ))}
+
+        <div className={styles.sectionTitle}>
+          <span className={styles.sectionIcon}>🏆 Passés : Liga - Journée 3</span>
+         
+        </div>
+
+        {pastMatches.map((match) => (
+          <div key={match.id} className={styles.matchCard}>
+            {match.id === 2 && (
+              <div className={styles.competitionHeader}>
+                <span className={styles.sectionIcon}>🏆 Liga - Journée 2</span>
+               
+              </div>
+            )}
+            <div className={styles.matchInfo}>
+              <div className={styles.team}>
+                <img src={match.homeTeamLogo || "/placeholder.svg"} alt={match.homeTeam} />
+                <span>{match.homeTeam}</span>
+              </div>
+              <div className={styles.score}>{match.score}</div>
+              <div className={styles.team}>
+                <img src={match.awayTeamLogo || "/placeholder.svg"} alt={match.awayTeam} />
+                <span>{match.awayTeam}</span>
+              </div>
+            </div>
+            {match.id === 2 && (
+              <div className={styles.forme}>
+                <span>😊 Forme :</span>
+                <div className={styles.formeIndicators}>
+                  {match.forme.map((result, index) => (
+                    <div key={index} className={`${styles.formePoint} ${result ? styles.win : styles.loss}`}></div>
+                  ))}
                 </div>
               </div>
-            ))
-          : pastMatches.map((match) => (
-              <div key={match.id} className={styles.matchCard}>
-                <div className={styles.competitionBadge}>{match.competition}</div>
-                <div className={styles.matchInfo}>
-                  <div className={styles.team}>
-                    <img src={match.homeTeamLogo || "/placeholder.svg"} alt={match.homeTeam} />
-                    <span>{match.homeTeam}</span>
-                  </div>
-                  <div className={styles.score}>{match.score}</div>
-                  <div className={styles.team}>
-                    <img src={match.awayTeamLogo || "/placeholder.svg"} alt={match.awayTeam} />
-                    <span>{match.awayTeam}</span>
-                  </div>
-                </div>
-                <div className={styles.forme}>
-                  <span>Forme :</span>
-                  <div className={styles.formeIndicators}>
-                    {match.forme.map((result, index) => (
-                      <div key={index} className={`${styles.formePoint} ${result ? styles.win : styles.loss}`}></div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+            )}
+          </div>
+        ))}
       </div>
     </section>
   )
 }
 
 export default MatchHistory
+

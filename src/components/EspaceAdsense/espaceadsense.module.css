@@ -1,0 +1,117 @@
+.academiesContainer {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  margin-top: 40px;
+  height:250px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #004d98;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: #a50034;
+  border-radius: 2px;
+}
+
+.academiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.academieCard {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.academieCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 77, 152, 0.2);
+  border-color: #004d98;
+}
+
+.academieImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.academieContent {
+  padding: 24px;
+}
+
+.academieName {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #004d98;
+  margin-bottom: 12px;
+}
+
+.academieDescription {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.academieStats {
+  margin-bottom: 20px;
+}
+
+.joueurs {
+  background: #a50034;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.voirPlusBtn {
+  background: #004d98;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.voirPlusBtn:hover {
+  background: #003d7a;
+}
+
+@media (max-width: 768px) {
+  .academiesContainer {
+    padding: 40px 15px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .academiesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

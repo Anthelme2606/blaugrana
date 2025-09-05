@@ -1,7 +1,8 @@
-
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+/* Variables CSS */
 :root {
-  /* FranceStudy+ Color Palette */
   --color-blue-dark: #00184B;     
   --color-blue-petrol: #001B33;   
   --color-blue-gray: #4A6685;     
@@ -9,45 +10,36 @@
   --color-bordeaux: #742B3C;      
   --color-gray-cool: #AAB0BB;     
   --color-offwhite: #F8F6F3;  
+  --color-white: #ffffff;
+  --color-black: #000000;
+
   --background: #ffffff;
   --foreground: #1f2937;
   --card: #f8fafc;
   --card-foreground: #374151;
   --popover: #ffffff;
   --popover-foreground: #1f2937;
-   --success: #10b981;
+  --success: #10b981;
   --success-foreground: #ffffff;
-  /* --primary: #374151; */
-  --primary:#00184B;
+  --primary: #00184B;
   --primary-foreground: #ffffff;
   --secondary: #6366f1;
   --secondary-foreground: #ffffff;
   --muted: #f8fafc;
   --muted-foreground: #1f2937;
-  /* --accent: #6366f1; */
-  --accent:#742B3C;
+  --accent: #742B3C;
   --accent-foreground: #ffffff;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
   --border: #e5e7eb;
   --input: #f8fafc;
   --ring: #6366f1;
-  --chart-1: #6366f1;
-  --chart-2: #dc2626;
-  --chart-3: #f59e0b;
-  --chart-4: #be123c;
-  --chart-5: #374151;
   --radius: 0.5rem;
   --sidebar: #f8fafc;
   --sidebar-foreground: #1f2937;
-  --sidebar-primary: #6366f1;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #dc2626;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #e5e7eb;
-  --sidebar-ring: #6366f1;
 }
 
+/* Dark Mode */
 .dark {
   --background: #1f2937;
   --foreground: #f8fafc;
@@ -68,45 +60,42 @@
   --border: #4b5563;
   --input: #374151;
   --ring: #6366f1;
-  --chart-1: #6366f1;
-  --chart-2: #dc2626;
-  --chart-3: #f59e0b;
-  --chart-4: #be123c;
-  --chart-5: #374151;
   --sidebar: #374151;
   --sidebar-foreground: #f8fafc;
-  --sidebar-primary: #6366f1;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #dc2626;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #4b5563;
-  --sidebar-ring: #6366f1;
 }
 
-
-
-*{
+/* Reset global */
+* {
   margin: 0;
   padding: 0;
-  width: 100%;  
+  box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 50;
+  font-weight: 500;
   font-style: normal;
-  font-size: var(--font-size);
-  /* box-sizing: border-box; */
+}
 
-}
-.whiteSpace{
-  white-space: nowrap;
-}
+/* Body avec background image */
 body {
-  background-color: var(--color-white);
+  background-color: var(--color-white); /* fallback si image ne charge pas */
   color: var(--color-black);
   overflow-x: hidden;
-  box-sizing: border-box;
+  min-height: 100vh;
+
+  /* Image de fond */
+  background-image: url('./assets/bg.jpg'); /* adapte le chemin selon structure */
+  background-size: cover;       /* couvre tout l'écran */
+  background-position: center;  /* centré */
+  background-repeat: no-repeat; /* pas de répétition */
 }
-html, body {
+
+/* Assurer que html prend toute la hauteur */
+html {
+  height: 100%;
   overflow-x: hidden;
 }
 
+/* Classe utilitaire */
+.whiteSpace {
+  white-space: nowrap;
+}
