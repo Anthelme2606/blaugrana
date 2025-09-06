@@ -51,6 +51,10 @@ const Navbar = () => {
               <span className={styles.linkIcon}>Club</span>
               
             </a>
+            <a href="/connexion" className={styles.navLink} onClick={closeMenu}>
+              <span className={styles.linkIcon}>Connexion</span>
+              
+            </a>
           </div>
         </div>
 

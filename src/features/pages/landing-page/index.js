@@ -10,37 +10,37 @@ import "./landing-page.css";
 
 function LandingPage() {
   return (
-    <>
-     <Navbar />
-<div className="App">
-     
-      <main className="main-content">
-        <div className="main-title-section">
-          {/* <h1>FC Barcelona - Més que un club</h1> */}
-        </div>
+    <div className="global">
+      <Navbar />
+      <div className="App">
 
-        <div className="three-column-layout">
-         
-          <div className="center-column">
-            <div className="espace-defense">
-             
-              <MatchHistory />
+        <main className="main-content">
+          <div className="main-title-section">
+            {/* <h1>FC Barcelona - Més que un club</h1> */}
+          </div>
+
+          <div className="three-column-layout">
+
+            <div className="center-column">
+             <div className="espace-defense">
+
+                <MatchHistory />
+              </div>
+            </div>
+            <div className="left-column">
+              <ActuComponent />
+            </div>
+            <div className="right-column">
+              <ClubInfo />
             </div>
           </div>
-           <div className="left-column">
-            <ActuComponent />
-          </div>
-          <div className="right-column">
-            <ClubInfo />
-          </div>
-        </div>
 
-        <EspaceAdsense />
-      </main>
-      
+          <EspaceAdsense />
+        </main>
+
+      </div>
+      <Footer />
     </div>
-    <Footer />
-    </>
   )
 }
 

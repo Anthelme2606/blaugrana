@@ -1,7 +1,7 @@
 /* ========================
    RESET GLOBAL
 ======================== */
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,10 +9,10 @@
 
 html, body {
   width: 100%;
-  overflow-x: hidden; /* bloque le scroll horizontal */
+  overflow-x: hidden; 
   font-family: "Montserrat", sans-serif;
   background: #fff;
-}
+} */
 
 /* ========================
    ACTU SECTION
@@ -21,12 +21,14 @@ html, body {
   background: #ffffff;
   width: 100%;
   box-sizing: border-box;
+  
 }
 
 /* Article vedette */
 .featuredArticle {
   margin-bottom: 20px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .featuredImage {

@@ -1,44 +1,34 @@
+/* ========== APP GLOBAL BACKGROUND ========== */
+.global {
+  background-image: url('../../../assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--color-black);
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* ========== APP CONTAINER ========== */
 .App {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  grid-column: 1 / -1; 
-  width: 100vw;        
-  margin-left: calc(-50vw + 50%); 
-  box-sizing: border-box;
-  overflow-x: hidden;      
-}
-.App {
-  min-height: 100vh; /* au moins la hauteur de la fenêtre */
-  background-image: url('../../../assets/bg.jpg'); /* chemin relatif au CSS */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: var(--color-black);
-}
-
-/* .App {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  grid-column: 1 / -1;
   box-sizing: border-box;
   overflow-x: hidden;
-  margin: 0 auto;     
-  padding: 0 80px;   
-} */
-
-/* Mobile */
-
+  width: 100%; /* évite dépassements */
+}
 
 /* ========== MAIN CONTENT ========== */
 .main-content {
   flex: 1;
   width: 100%;
-  margin: 0;
-  padding: 80px 80px 80px 80px; 
+  max-width: 1400px; /* largeur maximale */
+  margin: 0 auto;    /* centré */
+  padding: 0 40px;   /* marge intérieure */
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* ========== MAIN TITLE SECTION ========== */
@@ -46,8 +36,8 @@
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   color: white;
   text-align: center;
-  padding: 40px 20px;
-  margin-top: 20px;
+  padding: 40px 40px;
+  margin-top: 110px;
   margin-bottom: 30px;
   height: 250px;
   display: flex;
@@ -65,23 +55,28 @@
 
 /* ========== THREE-COLUMN LAYOUT ========== */
 .three-column-layout {
+  width: 100%;
   max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1px;
+   grid-template-columns: 2fr 3fr 2fr; /* ≈ 60% / 40% / 40% */
+  gap: 20px;
   margin-bottom: 40px;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
+
 
 .left-column,
 .center-column,
 .right-column {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Section spéciale défense */
 .espace-defense h2 {
   color: #004d98;
   font-size: 1.8rem;
@@ -95,24 +90,23 @@
 /* ========== RESPONSIVE BREAKPOINTS ========== */
 @media (max-width: 1024px) {
   .three-column-layout {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes */
     gap: 20px;
   }
 
   .right-column {
     grid-column: 1 / -1; /* prend toute la largeur */
+    
   }
 }
-
 @media (max-width: 768px) {
-
-  .main-content {
-    padding: 0;       /* pas de marge sur mobile */
-  }
+ .main-content { padding: 0; /* pas de marge sur mobile */
+   box-sizing: border-box; width: 100vw; }
 
   .main-title-section {
     padding: 30px 20px;
-    height: auto; /* pour éviter que le texte flotte en hauteur fixe */
+    height: auto;
+    box-sizing: border-box;
   }
 
   .main-title-section h1 {
@@ -120,11 +114,20 @@
   }
 
   .three-column-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Une seule colonne */
     gap: 20px;
-    padding: 0 15px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .left-column,
+  .center-column,
+  .right-column {
+    box-sizing: border-box;
+    width: 100%; /* empêche tout dépassement */
   }
 }
+
 
 @media (max-width: 480px) {
   .main-title-section h1 {

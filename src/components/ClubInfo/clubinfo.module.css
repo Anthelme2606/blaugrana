@@ -134,12 +134,16 @@
 .classementHeader {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: space-between;
+ 
   padding: 15px 20px;
   border-bottom: 1px solid #e5e7eb;
   background: #f8f9fa;
 }
-
+.classementMenu{
+  display: flex;
+   gap: 8px;
+}
 .classementIcon {
   font-size: 16px;
   color: #1f1f1f;
