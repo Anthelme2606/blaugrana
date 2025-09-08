@@ -131,14 +131,36 @@
   overflow: hidden;
 }
 
+.classementSectionUefa {
+  width: 100%;
+  /* border: 1px solid #001f4d !important; */
+  margin-top: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+
 .classementHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
  
   padding: 15px 20px;
+  border-bottom: 1px solid #ff6b35;
+  /* background: #f8f9fa; */
+  color:white;
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ffcc02 100%);
+}
+.classementHeaderUefa{
+ display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 15px 20px;
   border-bottom: 1px solid #e5e7eb;
-  background: #f8f9fa;
+  /* background: #f8f9fa; */
+   background: linear-gradient(135deg, #001f4d 0%, #003d82 50%, #0066cc 100%);
+  border-bottom: 1px solid #001f4d;
 }
 .classementMenu{
   display: flex;
@@ -146,22 +168,56 @@
 }
 .classementIcon {
   font-size: 16px;
-  color: #1f1f1f;
+  /* color: #1f1f1f; */
+  color:white;
+}
+.classementIconUefa{
+   font-size: 16px;
+  color: white; 
+  
 }
 
 .classementHeader h3 {
 
   font-weight: 600;
   font-size: 14px;
-  color: #1f1f1f;
+  /* color: #1f1f1f; */
+  color:white;
+  margin: 0;
+}
+.classementHeaderUefa h3{
+   font-weight: 600;
+  font-size: 14px;
+  /* color: #1f1f1f; */
+  color:white;
   margin: 0;
 }
 
-.classementTable {
+.classementTableLiga {
+   background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ffcc02 100%),
+    url("@assets/laliga-rb.png") center / cover;
+  background-blend-mode: overlay;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  /* border-radius: 8px; */
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+/* .classementTableUefa {
   background: #ffffff;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+} */
+  .classementTableUefa {
+  background: linear-gradient(135deg, #001f4d 0%, #003d82 50%, #0066cc 100%),
+    url("@assets/uefa.png") center / cover;
+  background-blend-mode: overlay;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  /* border-radius: 8px; */
+  box-shadow: 0 4px 12px rgba(0, 31, 77, 0.3);
 }
 
 .tableHeader {
@@ -169,12 +225,32 @@
   grid-template-columns: 30px 1fr 40px 30px 40px;
   gap: 10px;
   padding: 12px 20px;
-  background: #f8f9fa;
-  border-bottom: 1px solid #e5e7eb;
+  /* background: #f8f9fa; */
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ffcc02 100%);
+  /* background: linear-gradient(135deg, #001f4d 0%, #003d82 50%, #0066cc 100%); */
+  border-bottom: 1px solid #ff6b35;
 
   font-weight: 600;
   font-size: 12px;
-  color: #6b7280;
+  /* color: #6b7280; */
+  color:white;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.tableHeaderUefa {
+ display: grid;
+  grid-template-columns: 30px 1fr 40px 30px 40px;
+  gap: 10px;
+  padding: 12px 20px;
+  /* background: #f8f9fa; */
+  background: linear-gradient(135deg, #001f4d 0%, #003d82 50%, #0066cc 100%);
+  border-bottom: 1px solid #001f4d;
+
+  font-weight: 600;
+  font-size: 12px;
+  /* color: #6b7280; */
+  color:white;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -185,27 +261,58 @@
   grid-template-columns: 30px 1fr 40px 30px 40px;
   gap: 10px;
   padding: 12px 20px;
-  border-bottom: 1px solid #f1f3f4;
+  border-bottom: 1px solid #ff6b35;
 
   font-size: 13px;
-  color: #1f1f1f;
+  /* color: #1f1f1f; */
+  color:white;
+  font-weight: 900;
   transition: background-color 0.2s ease;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
 }
+.tableRowUefa {
+  display: grid;
+  grid-template-columns: 30px 1fr 40px 30px 40px;
+  gap: 10px;
+  padding: 12px 20px;
+  /* border-bottom: 1px solid #f1f3f4; */
+  border-bottom: #001f4d;
 
+  font-size: 13px;
+  /* color: #1f1f1f; */
+  color:white;
+  font-weight: 900;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.tableRowUefa:hover {
+  /* background-color: #f8f9fa; */
+  background: linear-gradient(135deg, #001f4d 0%, #003d82 50%, #0066cc 100%);
+}
 .tableRow:hover {
-  background-color: #f8f9fa;
+  background-color: #ff6b35 !important;
+  /* background: linear-gradient(135deg, #001f4d 0%, #003d82 50%, #0066cc 100%); */
 }
 
 .barceloneRow {
-  background-color: #e3f2fd !important;
-  color: #004d98 !important;
-  font-weight: 600;
+  background-color: #ff6b35 !important;
+  /* color: #004d98 !important; */
+  color:green !important;
+  font-weight: 900;
 }
-
+.barceloneRowUefa {
+  background-color: #0f215c !important;
+  color: green !important;
+  font-weight: 900;
+}
 .barceloneRow:hover {
+  background-color: #ff6b35 !important;
+}
+.barceloneRowUefa:hover {
   background-color: #e3f2fd !important;
 }
 
@@ -246,12 +353,13 @@
     padding: 10px 15px;
   }
 
-  .classementHeader {
+  .classementHeader ,.c{
     padding: 12px 15px;
   }
 
+
   .tableHeader,
-  .tableRow {
+  .tableRow ,.tableRowUefa,.tableHeaderUefa{
     padding: 10px 15px;
     grid-template-columns: 25px 1fr 35px 25px 35px;
     gap: 8px;

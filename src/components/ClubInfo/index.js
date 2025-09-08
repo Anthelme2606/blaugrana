@@ -77,7 +77,7 @@ const ClubInfo = () => {
           
         </div>
 
-        <div className={styles.classementTable}>
+        <div className={styles.classementTableLiga}>
           <div className={styles.tableHeader}>
             <span className={styles.positionCol}>#</span>
             <span className={styles.clubCol}>Club</span>
@@ -97,10 +97,10 @@ const ClubInfo = () => {
           ))}
         </div>
       </div>
-      <div className={styles.classementSection}>
-        <div className={styles.classementHeader}>
+      <div className={styles.classementSectionUefa}>
+        <div className={styles.classementHeaderUefa}>
           <div className={styles.classementMenu}>
-        <span className={styles.classementIcon}>☰</span>
+        <span className={styles.classementIconUefa}>☰</span>
           <h3>Classement</h3>
           </div>
           <div>
@@ -109,8 +109,8 @@ const ClubInfo = () => {
           
         </div>
 
-        <div className={styles.classementTable}>
-          <div className={styles.tableHeader}>
+        <div className={styles.classementTableUefa}>
+          <div className={styles.tableHeaderUefa}>
             <span className={styles.positionCol}>#</span>
             <span className={styles.clubCol}>Club</span>
             <span className={styles.pointsCol}>Pts</span>
@@ -119,7 +119,7 @@ const ClubInfo = () => {
           </div>
 
           {classementUefaData.map((team, index) => (
-            <div key={index} className={`${styles.tableRow} ${team.isBarcelone ? styles.barceloneRow : ""}`}>
+            <div key={index} className={`${styles.tableRowUefa} ${team.isBarcelone ? styles.barceloneRowUefa : ""}`}>
               <span className={styles.positionCol}>{team.position}</span>
               <span className={styles.clubCol}>{team.club}</span>
               <span className={styles.pointsCol}>{team.points}</span>

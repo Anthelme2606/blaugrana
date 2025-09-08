@@ -4,6 +4,7 @@ import Actu1 from "@assets/actu-1.png"
 import Actu2 from "@assets/actu-2.png"
 import Actu3 from "@assets/actu-3.png"
 import Actu4 from "@assets/actu-4.png"
+import ActuFeature from "@assets/actu-feature.png";
 
 const ActuComponent = () => {
   const actualites = [
@@ -54,7 +55,7 @@ const ActuComponent = () => {
       {featuredArticle && (
         <article className={styles.featuredArticle}>
           <div className={styles.featuredImage}>
-            <img src={featuredArticle.image || "/placeholder.svg"} alt={featuredArticle.titre} />
+            <img src={ActuFeature || "/placeholder.svg"} alt={featuredArticle.titre} />
             <div className={styles.featuredOverlay}>
               <span className={styles.featuredCategorie}>{featuredArticle.categorie}</span>
               <h2 className={styles.featuredTitre}>{featuredArticle.titre}</h2>

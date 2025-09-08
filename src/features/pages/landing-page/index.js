@@ -22,10 +22,9 @@ function LandingPage() {
           <div className="three-column-layout">
 
             <div className="center-column">
-             <div className="espace-defense">
-
+           
                 <MatchHistory />
-              </div>
+             
             </div>
             <div className="left-column">
               <ActuComponent />

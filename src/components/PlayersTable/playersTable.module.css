@@ -1,0 +1,152 @@
+.tableContainer {
+  width: 100%;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tableTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  color: var(--foreground);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.filterBtn:hover {
+  background-color: var(--muted);
+}
+
+.filterBtn.active {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-color: var(--primary);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--background);
+}
+
+.table th {
+  background-color: var(--muted);
+  color: var(--foreground);
+  font-weight: 600;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--foreground);
+}
+
+.table tbody tr:hover {
+  background-color: var(--muted);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.playerName {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status.actif {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.status.pret {
+  background-color: var(--chart-3);
+  color: var(--primary-foreground);
+}
+
+.stat {
+  font-weight: 600;
+  text-align: center;
+}
+
+.actionBtn {
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.actionBtn:hover {
+  background-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .tableHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters {
+    justify-content: center;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .tableTitle {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+}

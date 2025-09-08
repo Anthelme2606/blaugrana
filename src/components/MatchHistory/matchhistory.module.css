@@ -1,9 +1,13 @@
 .matchSection {
-  background: #ffffff;
-  border-radius: 0;
-  padding: 0;
-  box-shadow: none;
-  border: none;
+ background: #ffffff;
+  border: 1px solid #e5e7eb;
+  margin: 0; 
+  padding: 0; 
+  overflow-x: hidden;
+  width: calc(100% - 2px); /* prend toute la largeur mais respecte la marge */
+  max-width: 100%;
+  box-sizing: border-box; /* inclut padding et border dans la largeur */
+  /* padding: 50px; */
 }
 
 .sectionHeader {
@@ -86,10 +90,14 @@
 }
 
 .matchList {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 

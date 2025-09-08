@@ -1,0 +1,59 @@
+.page {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0 0 0.5rem 0;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pageDescription {
+  font-size: 1.1rem;
+  color: var(--muted-foreground);
+  margin: 0 0 2rem 0;
+}
+
+.content {
+  background-color: var(--card);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.placeholder {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--muted-foreground);
+}
+
+.placeholder h3 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+  color: var(--foreground);
+}
+
+.placeholder p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 1.5rem;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+
+  .placeholder {
+    padding: 2rem 1rem;
+  }
+}
