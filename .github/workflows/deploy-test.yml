@@ -1,19 +1,18 @@
-name: 🚀 Deploy React Build to OVH Test
+name: Deploy React App via FTP
 
 on:
   push:
     branches:
-      - deploy-test
+      - main  # branche à déployer
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -24,7 +23,7 @@ jobs:
       - name: Build React app
         run: npm run build
 
-      - name: FTP Deploy to OVH
+      - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ftp.cluster027.hosting.ovh.net
@@ -32,6 +31,6 @@ jobs:
           password: ZoOmBArCa360
           protocol: ftp
           port: 21
-          local-dir: ./build/
-          server-dir: test/
-          log-level: verbose
+          local-dir: build/
+          server-dir: /public_html/
+          dry-run: false
