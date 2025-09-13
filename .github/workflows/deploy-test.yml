@@ -3,7 +3,7 @@ name: Deploy React App via FTP
 on:
   push:
     branches:
-      - deploy-test  # branche à déployer
+      - deploy-test
 
 jobs:
   deploy:
@@ -22,9 +22,6 @@ jobs:
 
       - name: Build React app
         run: npm run build
-
-      - name: Copy .htaccess to build folder
-        run: cp .htaccess build/.htaccess
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4

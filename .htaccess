@@ -1,10 +1,9 @@
 DirectoryIndex index.html
 Options -MultiViews
 RewriteEngine On
-RewriteBase /
+RewriteBase /test/
 
 # rediriger tout sauf les fichiers et dossiers existants vers index.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.html [L]
-
+RewriteRule ^ index.html [L]
