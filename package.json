@@ -56,7 +56,8 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "start:prod": "node server.js"
+    "start:prod": "node server.js",
+     "postbuild": "cp .htaccess build/.htaccess"
   },
   "eslintConfig": {
     "extends": [
