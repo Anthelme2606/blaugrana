@@ -21,6 +21,6 @@ jobs:
           password: ZoOmBArCa360
           protocol: ftp
           port: 21
-          local-dir: ./
+          local-dir: ./public
           server-dir: test/
           log-level: verbose
