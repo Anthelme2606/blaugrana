@@ -23,6 +23,9 @@ jobs:
       - name: Build React app
         run: npm run build
 
+      - name: Copy .htaccess to build folder
+        run: cp .htaccess build/.htaccess
+
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -32,5 +35,5 @@ jobs:
           protocol: ftp
           port: 21
           local-dir: build/
-          server-dir: /public_html/test/
+          server-dir: /test/
           dry-run: false
