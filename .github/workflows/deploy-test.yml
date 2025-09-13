@@ -1,0 +1,26 @@
+name: 🚀 Deploy to OVH Test
+
+on:
+  push:
+    branches:
+      - deploy-test
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: FTP Deploy to OVH
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ftp.cluster027.hosting.ovh.net
+          username: fcbarcj
+          password: ZoOmBArCa360
+          protocol: ftp
+          port: 21
+          local-dir: ./
+          server-dir: test/
+          log-level: verbose
