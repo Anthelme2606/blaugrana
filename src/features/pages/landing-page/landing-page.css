@@ -58,7 +58,7 @@
   width: 100%;
   max-width: 1400px;
   display: grid;
-   grid-template-columns: 2fr 5fr 2fr; /* ≈ 40% / 60% / 40% */
+   grid-template-columns: 2.5fr 5fr 2.5fr; /* ≈ 40% / 60% / 40% */
   gap: 5px;
   margin-bottom: 40px;
   box-sizing: border-box;
