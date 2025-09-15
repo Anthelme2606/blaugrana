@@ -15,7 +15,7 @@ const AppWrapper = () => {
 const App = () => (
  
 <AppProvider>
-    <Router>
+     <Router basename="/test">
       
         <AppWrapper />
    
