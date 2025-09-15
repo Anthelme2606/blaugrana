@@ -9,20 +9,28 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      # 1️⃣ Récupérer le code
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # 2️⃣ Installer Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
+      # 3️⃣ Installer les dépendances
       - name: Install dependencies
         run: npm install
 
+      # 4️⃣ Build React app
       - name: Build React app
-        run: npm run build
+        run: |
+          npm run build
+          # Copier le .htaccess dans build/ pour le déploiement
+          cp .htaccess build/.htaccess
 
+      # 5️⃣ Déployer via FTP
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
