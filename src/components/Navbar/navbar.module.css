@@ -9,7 +9,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #8b0000;
+  /* background-color: #8b0000; */
+  background-color: var(--color-bordeaux);
   background: linear-gradient(to right, #8b0000, #dc143c);
   padding: 8px 20px;
   color: white;
