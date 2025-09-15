@@ -31,6 +31,6 @@ jobs:
           password: ZoOmBArCa360
           protocol: ftp
           port: 21
-          local-dir: build/
-          server-dir: /test/
+          local-dir: ./build/
+          server-dir: /www/test/
           dry-run: false
