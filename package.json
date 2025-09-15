@@ -2,6 +2,7 @@
   "name": "barca-client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/test",
   "dependencies": {
     "@apollo/client": "^3.11.8",
     "@hookform/resolvers": "^4.1.2",
