@@ -1,0 +1,575 @@
+/* Complete CSS rewrite to match the exact design from image */
+.header {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  border: none;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8b0000;
+  background: linear-gradient(to right, #8b0000, #dc143c);
+  padding: 8px 20px;
+  color: white;
+  font-size: 13px;
+}
+
+.dateSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dateLabel {
+  background-color: black;
+  color: white;
+  padding: 4px 8px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.dateValue {
+  color: white;
+  font-size: 13px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.topLinks {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+  justify-content: center;
+}
+
+.topLink {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 2px 4px;
+  background-color: transparent;
+  white-space: nowrap;
+}
+
+.topLink:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.separator {
+  color: #ffffff;
+  margin: 0 3px;
+  font-weight: bold;
+}
+
+.separatorb {
+  color: #000000a1;
+  margin: 0 3px;
+  font-weight: bold;
+}
+
+.searchSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchLabel {
+  background-color: #8b0000;
+  color: white;
+  padding: 4px 8px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.searchInput {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  width: 180px;
+  text-align: center;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #a50034;
+  box-shadow: 0 0 4px rgba(165, 0, 52, 0.5);
+}
+
+.bottomSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 8px 20px;
+  border-top: 2px solid #8b0000;
+  gap: 20px;
+}
+
+.logo {
+  background-color: black;
+  color: white;
+  padding: 8px 16px;
+  font-weight: bold;
+  font-size: 16px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.logoText {
+  color: white;
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #a50034;
+  flex-shrink: 0;
+}
+
+.navLogo img {
+  width: 40px;
+  height: 40px;
+}
+
+.mainNav {
+  display: flex;
+  gap: 5px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navLink {
+  color: #660000;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  text-decoration: none;
+  background-color: #8b0000;
+  color: white;
+  border-radius: 4px;
+}
+
+.menusDynamiques {
+  position: absolute;
+  right: 0;
+  background-color: #8b0000;
+  padding: 4px 8px;
+}
+
+.menusText {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Enhanced mobile responsiveness with better breakpoints and layout */
+/* Mobile First - Small screens (up to 480px) */
+@media (max-width: 480px) {
+  .topSection {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 16px;
+  }
+
+  .dateSection {
+    order: 1;
+    align-self: flex-start;
+  }
+
+  .dateValue {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+
+  .topLinks {
+    order: 3;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3px;
+    width: 100%;
+  }
+
+  .topLink {
+    font-size: 11px;
+    padding: 4px 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+
+  .separator {
+    display: none; /* Hide separators on very small screens */
+  }
+
+  .searchSection {
+    order: 2;
+    align-self: flex-end;
+    margin-bottom: 8px;
+  }
+
+  .searchInput {
+    width: 140px;
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  .bottomSection {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 16px;
+    text-align: center;
+  }
+
+  .navLogo {
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  .navLogo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .mainNav {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .navLink {
+    display: block;
+    text-align: center;
+    padding: 8px 12px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    font-size: 12px;
+  }
+
+  .navLink:hover {
+    background-color: #8b0000;
+    color: white;
+    border-color: #8b0000;
+  }
+
+  .separatorb {
+    display: none; /* Hide separators in mobile menu */
+  }
+}
+
+/* Tablet - Medium screens (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .topSection {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .dateSection {
+    align-self: flex-start;
+  }
+
+  .topLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .topLink {
+    font-size: 12px;
+    padding: 3px 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+
+  .searchSection {
+    align-self: flex-end;
+  }
+
+  .searchInput {
+    width: 160px;
+  }
+
+  .bottomSection {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+
+  .navLogo {
+    justify-content: center;
+  }
+
+  .mainNav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    max-width: 100%;
+  }
+
+  .navLink {
+    font-size: 12px;
+    padding: 6px 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+  }
+
+  .navLink:hover {
+    background-color: #8b0000;
+    color: white;
+    border-color: #8b0000;
+  }
+
+  .separatorb {
+    display: none; /* Hide separators on tablet */
+  }
+}
+
+/* Large tablet and small desktop (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .topSection {
+    padding: 8px 16px;
+  }
+
+  .searchInput {
+    width: 160px;
+  }
+
+  .bottomSection {
+    padding: 8px 16px;
+    gap: 15px;
+  }
+
+  .mainNav {
+    gap: 3px;
+  }
+
+  .navLink {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+}
+
+/* Added utility classes for better mobile experience */
+@media (max-width: 768px) {
+  .header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Improved focus states for accessibility */
+.topLink:focus,
+.navLink:focus,
+.searchInput:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .topLink:focus,
+  .navLink:focus {
+    outline-color: #8b0000;
+  }
+}
+
+/* Mobile-specific styles */
+.mobileHeader {
+  display: none;
+}
+
+.desktopHeader {
+  display: block;
+}
+
+/* Mobile header styles */
+@media (max-width: 768px) {
+  .mobileHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #8b0000, #dc143c);
+    padding: 12px 16px;
+    color: white;
+  }
+
+  .desktopHeader {
+    display: none;
+  }
+
+  .mobileNavLogo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .mobileDateSection {
+    flex: 1;
+    text-align: center;
+  }
+
+  .mobileDateValue {
+    color: white;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .mobileMenuButton {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+
+  .mobileMenuButton:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Mobile sidebar styles */
+.mobileMenuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobileSidebar {
+  width: 280px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: linear-gradient(to right, #8b0000, #dc143c);
+  color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.sidebarHeader h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.closeButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebarSection {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebarSection:last-of-type {
+  border-bottom: none;
+}
+
+.sectionTitle {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #8b0000;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sidebarNav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebarLink {
+  color: #333;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+}
+
+.sidebarLink:hover {
+  background-color: #f8f9fa;
+  border-left-color: #8b0000;
+  color: #8b0000;
+  transform: translateX(4px);
+}
+
+.sidebarSearchSection {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.sidebarSearchInput {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.sidebarSearchInput:focus {
+  outline: none;
+  border-color: #8b0000;
+  box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
+}
