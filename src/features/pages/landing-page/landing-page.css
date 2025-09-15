@@ -37,8 +37,8 @@
   color: white;
   text-align: center;
   padding: 40px 40px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   height: 250px;
   display: flex;
   align-items: center;
@@ -58,15 +58,15 @@
   width: 100%;
   max-width: 1400px;
   display: grid;
-   grid-template-columns: 3fr 4fr 1fr; /* ≈ 40% / 60% / 40% */
-  gap: 20px;
+   grid-template-columns: 2fr 5fr 2fr; /* ≈ 40% / 60% / 40% */
+  gap: 5px;
   margin-bottom: 40px;
   box-sizing: border-box;
   overflow-x: hidden;
 }
 
 
-.left-column,
+/* .left-column,
 .center-column,
 .right-column {
   display: flex;
@@ -74,6 +74,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+} */
+ .left-column,
+ .center-column,
+.right-column {
+  max-width: 100%;
+  overflow: hidden; /* ou auto si tu veux scroll */
+  justify-content: flex-start; /* ou center si tu veux centrer le contenu */
 }
 
 /* Section spéciale défense */
