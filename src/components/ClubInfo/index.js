@@ -1,5 +1,6 @@
 import styles from "./clubinfo.module.css"
-
+import LIGA from "@assets/laliga-rb.png"
+import UEFA from "@assets/league.png";
 const ClubInfo = () => {
   const newsItems = [
     { time: "09:00", title: "Balde, incertain pour le début de la ligu...", isImportant: false },
@@ -26,15 +27,15 @@ const ClubInfo = () => {
     { position: 8, club: "Elche", points: 5, matches: 3, diff: 2 },
   ]
   const classementUefaData = [
-  { position: 1, club: "FC Barcelona", points: 10, matches: 4, diff: +8 ,isBarcelone: true },
-  { position: 2, club: "Newcastle United", points: 9, matches: 4, diff: +5 },
-  { position: 3, club: "Arsenal", points: 8, matches: 4, diff: +4 },
-  { position: 4, club: " Paris Saint-Germain", points: 7, matches: 4, diff: +2},
-  { position: 5, club: "Bayer Leverkusen", points: 6, matches: 4, diff: 0 },
-  { position: 6, club: "Atalanta", points: 5, matches: 4, diff: -1 },
-  { position: 7, club: "Benfica", points: 4, matches: 4, diff: -2 },
-  { position: 8, club: "Tottenham Hotspur", points: 3, matches: 4, diff: -6 }
-];
+    { position: 1, club: "FC Barcelona", points: 10, matches: 4, diff: +8, isBarcelone: true },
+    { position: 2, club: "Newcastle United", points: 9, matches: 4, diff: +5 },
+    { position: 3, club: "Arsenal", points: 8, matches: 4, diff: +4 },
+    { position: 4, club: " Paris Saint-Germain", points: 7, matches: 4, diff: +2 },
+    { position: 5, club: "Bayer Leverkusen", points: 6, matches: 4, diff: 0 },
+    { position: 6, club: "Atalanta", points: 5, matches: 4, diff: -1 },
+    { position: 7, club: "Benfica", points: 4, matches: 4, diff: -2 },
+    { position: 8, club: "Tottenham Hotspur", points: 3, matches: 4, diff: -6 }
+  ];
 
 
   return (
@@ -67,14 +68,33 @@ const ClubInfo = () => {
 
       <div className={styles.classementSection}>
         <div className={styles.classementHeader}>
-          <div className={styles.classementMenu}>
+          <div className={styles.headerbetween}>
+            <div className={styles.headerImage}>
+              <img src={LIGA} alt="laliga" />
+            </div>
+            <div className={styles.headerText}>
+              <span>Classement LA LIGA</span>
+            </div>
+          </div>
+
+          {/* <div className={styles.classementMenu}>
         <span className={styles.classementIcon}>☰</span>
           <h3>Classement</h3>
           </div>
           <div>
             <h3>LALIGA</h3>
+          </div> */}
+
+        </div>
+        <div className={styles.classementHeader}>
+          <div className={styles.classementMenu}>
+            <span className={styles.classementIcon}>☰</span>
+            {/* <h3>Classement</h3> */}
           </div>
-          
+          <div>
+            <h3>LALIGA</h3>
+          </div>
+
         </div>
 
         <div className={styles.classementTableLiga}>
@@ -98,15 +118,23 @@ const ClubInfo = () => {
         </div>
       </div>
       <div className={styles.classementSectionUefa}>
+        <div className={styles.headerbetween}>
+          <div className={styles.headerImage2}>
+            <img src={UEFA} alt="laliga" />
+          </div>
+          <div className={styles.headerText}>
+            <span>Classement UEFA</span>
+          </div>
+        </div>
         <div className={styles.classementHeaderUefa}>
           <div className={styles.classementMenu}>
-        <span className={styles.classementIconUefa}>☰</span>
-          <h3>Classement</h3>
+            <span className={styles.classementIconUefa}>☰</span>
+            {/* <h3>Classement</h3> */}
           </div>
           <div>
             <h3>UEFA</h3>
           </div>
-          
+
         </div>
 
         <div className={styles.classementTableUefa}>

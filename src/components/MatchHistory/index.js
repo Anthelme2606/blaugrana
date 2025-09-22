@@ -38,16 +38,39 @@ const MatchHistory = () => {
       score: "1-1",
       forme: [true, true, true, true, false],
     },
+    // {
+    //   id: 2,
+    //   competition: "Liga - Journée 2",
+    //   homeTeam: "LEVANTE",
+    //   awayTeam: "BARCELONE",
+    //   homeTeamLogo: LevanteLogo,
+    //   awayTeamLogo: BarcaLogo,
+    //   score: "2-3",
+    //   forme: [true, true, true, true, false],
+    // },
+  ]
+
+   const uefaMatches = [
     {
-      id: 2,
-      competition: "Liga - Journée 2",
-      homeTeam: "LEVANTE",
+      id: 1,
+      competition: "Liga - Journée 3",
+      homeTeam: "R. VALLADOLID",
       awayTeam: "BARCELONE",
-      homeTeamLogo: LevanteLogo,
+      homeTeamLogo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-U0cC34nioDqheI9BlpaFxpyPDDM5KE.png",
       awayTeamLogo: BarcaLogo,
-      score: "2-3",
+      score: "1-1",
       forme: [true, true, true, true, false],
     },
+    // {
+    //   id: 2,
+    //   competition: "Liga - Journée 2",
+    //   homeTeam: "LEVANTE",
+    //   awayTeam: "BARCELONE",
+    //   homeTeamLogo: LevanteLogo,
+    //   awayTeamLogo: BarcaLogo,
+    //   score: "2-3",
+    //   forme: [true, true, true, true, false],
+    // },
   ]
 
   return (
@@ -56,8 +79,11 @@ const MatchHistory = () => {
         <div className={styles.adsenseContainer}>
 
         </div>
+        <div className={styles.sectionTitle1}>
+          <span className={styles.sectionIcon}>🏆 Calendrier LA LIGA</span>
+        </div>
         <div className={styles.sectionTitle}>
-          <span className={styles.sectionIcon}>🏆 À venir : Liga - Journée 4</span>
+          <span className={styles.sectionIcon}>À venir - Journée 4</span>
         </div>
 
         {upcomingMatches.map((match) => (
@@ -122,6 +148,36 @@ const MatchHistory = () => {
                 </div>
               </div>
             )}
+          </div>
+        ))}
+         <div className={styles.sectionTitle2}>
+          <span className={styles.sectionIcon}>🏆 Calendrier UEFA</span>
+        </div>
+          {uefaMatches.map((match) => (
+          <div key={match.id} className={styles.matchCard}>
+            <div className={styles.matchInfo}>
+              <div className={styles.team}>
+                <img src={match.homeTeamLogo || "/placeholder.svg"} alt={match.homeTeam} />
+                <span>{match.homeTeam}</span>
+              </div>
+              <div className={styles.versus}>vs</div>
+              <div className={styles.team}>
+                <img src={match.awayTeamLogo || "/placeholder.svg"} alt={match.awayTeam} />
+                <span>{match.awayTeam}</span>
+              </div>
+            </div>
+            <div className={styles.matchDetails}>
+              <div className={styles.date}>
+                <span className={styles.clockIcon}>🕐{match.date}</span>
+              
+              </div>
+              <div className={styles.locationIcon}>📍</div>
+            </div>
+            <div className={styles.betButton}>
+              <span className={styles.pmuLogo}>PMU</span>
+              Pariez sur le match
+              <span className={styles.pmuLogo}>PMU</span>
+            </div>
           </div>
         ))}
       </div>

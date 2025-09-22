@@ -30,6 +30,35 @@
 }
 
 /* Added new section title styling for "À venir" and "Passés" headers */
+.sectionTitle1{
+   font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+  background-color: #ef4444;
+}
+.sectionTitle2{
+   font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+ 
+  background: linear-gradient(to right, #ffffff, #005BAC);
+}
 .sectionTitle {
   font-weight: 600;
   font-size: 1rem;
