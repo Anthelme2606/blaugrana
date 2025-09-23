@@ -5,7 +5,7 @@ import Actu2 from "@assets/actu-2.png"
 import Actu3 from "@assets/actu-3.png"
 import Actu4 from "@assets/actu-4.png"
 import ActuFeature from "@assets/actu-feature.png";
-
+import {Link} from 'react-router-dom';
 const ActuComponent = () => {
   const actualites = [
     {
@@ -54,6 +54,7 @@ const ActuComponent = () => {
     <section className={styles.actuSection}>
       {featuredArticle && (
         <article className={styles.featuredArticle}>
+          <Link className={styles.link} to="/article">
           <div className={styles.featuredImage}>
             <img src={ActuFeature || "/placeholder.svg"} alt={featuredArticle.titre} />
             <div className={styles.featuredOverlay}>
@@ -61,6 +62,7 @@ const ActuComponent = () => {
               <h2 className={styles.featuredTitre}>{featuredArticle.titre}</h2>
             </div>
           </div>
+          </Link>
         </article>
       )}
 

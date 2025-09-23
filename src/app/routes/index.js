@@ -9,6 +9,7 @@ import GererBarcaMercato from "../../features/pages/Gestions/mercato";
 import GererClassementLaLiga from "../../features/pages/Gestions/classementLaliga";
 import GererClassementUEFA from "../../features/pages/Gestions/classementUefa";
 import ConfigAdsense from "../../features/pages/config/adsenses";
+import Article from "@pages/article";
 const AppRoutes = () => {
   return (
   
@@ -21,6 +22,7 @@ const AppRoutes = () => {
         <Route path="/classement-uefa" element={<GererClassementUEFA />} />
         <Route path="/barca-mercato" element={<GererBarcaMercato />} />
         <Route path="/config-adsense" element={<ConfigAdsense />} />
+        <Route path="/article" element={<Article/>}/>
     </Routes>
   );
 };

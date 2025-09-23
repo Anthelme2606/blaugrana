@@ -1,0 +1,196 @@
+.container {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+/* Header Styles */
+.header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #cc0000;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+}
+
+.logo {
+  background-color: #000000;
+  color: white;
+  padding: 8px 16px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dateLabel {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+.dateFormat {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.currentDate {
+  font-weight: bold;
+  color: #333;
+}
+
+.search {
+  background-color: #cc0000;
+  color: white;
+  padding: 8px 16px;
+  font-weight: bold;
+}
+
+.navigation {
+  padding: 8px 20px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+.dynamicMenu {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+/* Main Content */
+.mainContent {
+  padding: 20px;
+}
+
+.adSpace {
+  background-color: #e6f3ff;
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0;
+  font-weight: bold;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+/* Article Styles */
+.article {
+  background-color: white;
+  margin: 20px 0;
+}
+
+.articleHeader {
+  margin-bottom: 20px;
+}
+
+.articleTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+.articleMeta {
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  gap: 20px;
+}
+
+.articleImageContainer {
+  position: relative;
+  margin: 20px 0;
+}
+
+.articleImage {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.featuredBadge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #0066cc;
+  color: white;
+  padding: 8px 16px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.articleContent {
+  line-height: 1.6;
+  color: #333;
+  margin: 20px 0;
+}
+
+.articleContent p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.articleFooter {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.tags {
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  background-color: #f0f0f0;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.socialShare {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .headerTop {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navigation {
+    font-size: 10px;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .articleTitle {
+    font-size: 20px;
+  }
+
+  .articleMeta {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

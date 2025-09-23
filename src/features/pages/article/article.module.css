@@ -1,0 +1,57 @@
+.global {
+    width:100%;
+    box-sizing: border-box;
+
+}
+.App {
+  display: grid;
+  grid-template-columns: 8fr 2fr; /* 2 colonnes 8/2 */
+  gap: 1rem;
+  min-height: 100vh;
+}
+.history {
+  display: grid;
+  grid-template-columns: 4fr 4fr; /* 2 colonnes 8/2 */
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+/* Sur mobile : empile en colonnes */
+@media (max-width: 768px) {
+  .App {
+    grid-template-columns: 1fr; /* une seule colonne */
+  }
+   .history {
+    grid-template-columns: 1fr; /* une seule colonne */
+  }
+}
+
+.col1 {
+    display: flex;
+    flex-direction: column;
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.col2 {
+     display: flex;
+    flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+}
+
+.history1 {
+    display: flex;
+    flex-direction: column;
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.history2 {
+     display: flex;
+    flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+}

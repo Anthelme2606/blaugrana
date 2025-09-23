@@ -29,6 +29,7 @@ html, body {
   margin-bottom: 20px;
   width: 100%;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 .featuredImage {
@@ -55,7 +56,10 @@ html, body {
   padding: 30px 20px 20px;
   color: white;
 }
-
+.link{
+  text-decoration: none;
+  
+}
 .featuredCategorie {
   display: inline-block;
   background: #004d98;
