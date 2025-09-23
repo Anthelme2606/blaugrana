@@ -86,16 +86,16 @@ const ClubInfo = () => {
           </div> */}
 
         </div>
-        <div className={styles.classementHeader}>
+        {/* <div className={styles.classementHeader}>
           <div className={styles.classementMenu}>
             <span className={styles.classementIcon}>☰</span>
-            {/* <h3>Classement</h3> */}
+         
           </div>
           <div>
             <h3>LALIGA</h3>
           </div>
 
-        </div>
+        </div> */}
 
         <div className={styles.classementTableLiga}>
           <div className={styles.tableHeader}>
@@ -126,16 +126,16 @@ const ClubInfo = () => {
             <span>Classement UEFA</span>
           </div>
         </div>
-        <div className={styles.classementHeaderUefa}>
+        {/* <div className={styles.classementHeaderUefa}>
           <div className={styles.classementMenu}>
             <span className={styles.classementIconUefa}>☰</span>
-            {/* <h3>Classement</h3> */}
+           
           </div>
           <div>
             <h3>UEFA</h3>
           </div>
 
-        </div>
+        </div> */}
 
         <div className={styles.classementTableUefa}>
           <div className={styles.tableHeaderUefa}>

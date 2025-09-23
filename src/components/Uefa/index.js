@@ -24,14 +24,14 @@ const UefaComponent = () => {
         </div>
       </div>
 
-      <div className={styles.classementHeaderUefa}>
+      {/* <div className={styles.classementHeaderUefa}>
         <div className={styles.classementMenu}>
           <span className={styles.classementIconUefa}>☰</span>
         </div>
         <div>
           <h3>UEFA</h3>
         </div>
-      </div>
+      </div> */}
 
       <div className={styles.classementTableUefa}>
         <div className={styles.tableHeaderUefa}>

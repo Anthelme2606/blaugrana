@@ -12,6 +12,7 @@ const Article =()=>{
   return (
     <div className={styles.global}>
     <Navbar/>
+    <div className={styles.main}>
     <div className={styles.App}>
      
   <div className={styles.col1}>
@@ -35,7 +36,9 @@ const Article =()=>{
 
 
     </div>
+
     <EspaceAdsense/>
+    </div>
     <Footer/>
     </div>
   )

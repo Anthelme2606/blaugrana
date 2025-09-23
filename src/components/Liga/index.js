@@ -23,14 +23,14 @@ const LigaComponent = () => {
         </div>
       </div>
 
-      <div className={styles.classementHeader}>
+      {/* <div className={styles.classementHeader}>
         <div className={styles.classementMenu}>
           <span className={styles.classementIcon}>☰</span>
         </div>
         <div>
           <h3>LALIGA</h3>
         </div>
-      </div>
+      </div> */}
 
       <div className={styles.classementTableLiga}>
         <div className={styles.tableHeader}>
