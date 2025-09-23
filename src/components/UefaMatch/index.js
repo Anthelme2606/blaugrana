@@ -41,11 +41,11 @@ const UefaMatch = () => {
             <div className={styles.date}>🕐 {match.date}</div>
             <div className={styles.locationIcon}>📍 {match.venue}</div>
           </div>
-          <div className={styles.betButton}>
+          {/* <div className={styles.betButton}>
             <span className={styles.pmuLogo}>PMU</span>
             Pariez sur le match
             <span className={styles.pmuLogo}>PMU</span>
-          </div>
+          </div> */}
         </div>
       ))}
     </>
