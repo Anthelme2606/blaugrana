@@ -71,15 +71,15 @@ const Header = () => {
             </div>
 
             <div className={styles.topLinks}>
-              <a href="/#" className={styles.topLink}>
+              <a href="/embleme" className={styles.topLink}>
                 Embleme
               </a>
               <span className={styles.separator}>|</span>
-              <a href="/#" className={styles.topLink}>
+              <a href="/hymne" className={styles.topLink}>
                 Hymne
               </a>
               <span className={styles.separator}>|</span>
-              <a href="/#" className={styles.topLink}>
+              <a href="/slogan" className={styles.topLink}>
                 Le Slogan
               </a>
               <span className={styles.separator}>|</span>

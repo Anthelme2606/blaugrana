@@ -11,6 +11,9 @@ import GererClassementUEFA from "../../features/pages/Gestions/classementUefa";
 import ConfigAdsense from "../../features/pages/config/adsenses";
 import Article from "@pages/article";
 import About from "../../features/pages/about";
+import Embleme from "../../features/pages/embleme";
+import Hymne from "../../features/pages/hymne";
+import Slogan from "../../features/pages/slogan";
 const AppRoutes = () => {
   return (
   
@@ -25,6 +28,9 @@ const AppRoutes = () => {
         <Route path="/config-adsense" element={<ConfigAdsense />} />
         <Route path="/article" element={<Article/>}/>
         <Route path="/apropos" element={<About/>}/>
+        <Route path="/embleme" element={<Embleme/>}/>
+         <Route path="/hymne" element={<Hymne/>}/>
+          <Route path="/slogan" element={<Slogan/>}/>
     </Routes>
   );
 };
