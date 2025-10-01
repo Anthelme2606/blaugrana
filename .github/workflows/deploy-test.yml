@@ -3,7 +3,7 @@ name: Deploy React App via FTP
 on:
   push:
     branches:
-      - deploy-test
+      - deploy-f
 
 jobs:
   deploy:
