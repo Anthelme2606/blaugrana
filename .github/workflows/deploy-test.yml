@@ -34,11 +34,11 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server: ftp.cluster027.hosting.ovh.net
-          username: fcbarcj
-          password: ZoOmBArCa360
+          server:  ftp.cluster100.hosting.ovh.net
+          username:  blaugrh
+          password: BLau80gRAnaS13
           protocol: ftp
           port: 21
           local-dir: ./build/
-          server-dir: /www/test/
+          server-dir: /www
           dry-run: false
