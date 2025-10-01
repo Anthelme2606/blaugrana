@@ -40,5 +40,5 @@ jobs:
           protocol: ftp
           port: 21
           local-dir: ./build/
-          server-dir: /www
+          server-dir: /www/
           dry-run: false
