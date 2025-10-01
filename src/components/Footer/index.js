@@ -1,5 +1,6 @@
 import styles from "./footer.module.css"
-import BarcaLogo from "@assets/fc-barcelona-logo.png"
+//import BarcaLogo from "@assets/fc-barcelona-logo.png"
+import BarcaLogo from "@assets/app.png"
 const Footer = () => {
   return (
     <footer className={styles.footer}>

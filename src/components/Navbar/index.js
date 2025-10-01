@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import styles from "./navbar.module.css"
-import BarcaLogo from "@assets/fc-barcelona-logo.png"
+import BarcaLogo from "@assets/app.png"
 
 const Header = () => {
   const [currentDate, setCurrentDate] = useState("")

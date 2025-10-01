@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import styles from "./header.module.css"
-import BarcaLogo from "@assets/fc-barcelona-logo.png"
+//import BarcaLogo from "@assets/fc-barcelona-logo.png"
+import BarcaLogo from "@assets/app.png"
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
