@@ -1,0 +1,220 @@
+.global {
+  background-image: url('../../../assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--color-black);
+  width: 100%;
+  overflow-x: hidden;
+
+}
+.container {
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #00184B 0%, #a50044 100%); */
+  padding: 0;
+  margin: 0;
+}
+
+.hero {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 4px solid #fdb913;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #fdb913;
+  margin: 0;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.section {
+  margin-bottom: 60px;
+}
+
+.sectionHeader {
+  margin-bottom: 30px;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  color: #00184B;
+  margin: 0 0 15px 0;
+  font-weight: 700;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #00184B 0%, #a50044 100%);
+  border-radius: 2px;
+}
+
+.text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #333333;
+  margin: 0 0 20px 0;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.feature:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 77, 152, 0.2);
+  border-color: #00184B;
+}
+
+/* Ajustement pour les icônes Lucide React SVG */
+.featureIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #00184B;
+  height: 60px;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  color: #00184B;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.featureText {
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.motto {
+  margin-top: 40px;
+  padding: 40px;
+  background: linear-gradient(135deg, #00184B 0%, #a50044 100%);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.mottoText {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-style: italic;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  background: #1a1a1a;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 4px solid #fdb913;
+}
+
+.footerText {
+  font-size: 1.125rem;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Style pour l'icône Heart inline */
+.heartIcon {
+  display: inline-block;
+  vertical-align: middle;
+  color: #a50044;
+}
+
+.footerSubtext {
+  font-size: 0.95rem;
+  color: #fdb913;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .content {
+    padding: 40px 15px;
+  }
+
+  .mottoText {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+}

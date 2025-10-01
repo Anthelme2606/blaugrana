@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
 import styles from "./navbar.module.css"
 import BarcaLogo from "@assets/app.png"
-
+import { NavLink,Link } from "react-router-dom"
 const Header = () => {
   const [currentDate, setCurrentDate] = useState("")
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -49,9 +49,9 @@ const Header = () => {
     <>
       <header className={styles.header}>
         <div className={styles.mobileHeader}>
-          <div className={styles.mobileNavLogo}>
+          <NavLink to="/" className={styles.mobileNavLogo}>
             <img src={BarcaLogo || "/placeholder.svg"} alt="FC Barcelona" />
-          </div>
+          </NavLink>
 
           <div className={styles.mobileDateSection}>
             <span className={styles.mobileDateValue}>{currentDate}</span>
@@ -71,19 +71,19 @@ const Header = () => {
             </div>
 
             <div className={styles.topLinks}>
-              <a href="#" className={styles.topLink}>
+              <a href="/#" className={styles.topLink}>
                 Embleme
               </a>
               <span className={styles.separator}>|</span>
-              <a href="#" className={styles.topLink}>
+              <a href="/#" className={styles.topLink}>
                 Hymne
               </a>
               <span className={styles.separator}>|</span>
-              <a href="#" className={styles.topLink}>
+              <a href="/#" className={styles.topLink}>
                 Le Slogan
               </a>
               <span className={styles.separator}>|</span>
-              <a href="#" className={styles.topLink}>
+              <a href="/apropos" className={styles.topLink}>
                 A Propos
               </a>
             </div>
@@ -95,10 +95,10 @@ const Header = () => {
 
           {/* Bottom Section */}
           <div className={styles.bottomSection}>
-            <div className={styles.navLogo}>
+            <Link to="/" className={styles.navLogo}>
               <img src={BarcaLogo || "/placeholder.svg"} alt="FC Barcelona" />
               <span>FC Barcelona</span>
-            </div>
+            </Link>
 
             <nav className={styles.mainNav}>
               <a href="#" className={styles.navLink}>
